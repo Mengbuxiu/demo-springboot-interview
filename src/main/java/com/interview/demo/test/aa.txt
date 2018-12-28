@@ -1,0 +1,27 @@
+public static void main(java.lang.String[]);
+    Code:
+       0: ldc           #2                  // String abc
+       2: astore_1
+       3: new           #3                  // class java/lang/StringBuilder
+       6: dup
+       7: invokespecial #4                  // Method java/lang/StringBuilder."<init>":()V
+      10: ldc           #5                  // String a
+      12: invokevirtual #6                  // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+      15: new           #7                  // class java/lang/String
+      18: dup
+      19: ldc           #8                  // String bc
+      21: invokespecial #9                  // Method java/lang/String."<init>":(Ljava/lang/String;)V
+      24: invokevirtual #6                  // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+      27: invokevirtual #10                 // Method java/lang/StringBuilder.toString:()Ljava/lang/String;
+      30: astore_2
+      31: getstatic     #11                 // Field java/lang/System.out:Ljava/io/PrintStream;
+      34: aload_1
+      35: aload_2
+      36: if_acmpne     43
+      39: iconst_1
+      40: goto          44
+      43: iconst_0
+      44: invokevirtual #12                 // Method java/io/PrintStream.println:(Z)V
+      47: return
