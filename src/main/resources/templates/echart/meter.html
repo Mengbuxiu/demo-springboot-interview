@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div id="meter" style="width: 300px;height: 200px">
+
+    </div>
+    <script src="https://cdn.bootcss.com/echarts/4.2.0-rc.2/echarts.min.js"></script>
+    <script>
+        // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('meter'));
+
+        var option = {
+            tooltip : {
+                formatter: "{a} : {c}%",
+                textStyle:{
+                    "fontSize": 12
+                }
+            },
+            toolbox: {
+                feature: {
+                    restore: {},
+                    saveAsImage: {}
+                }
+            },
+            series: [
+                {
+                    name: '完成度',
+                    type: 'gauge',
+                    detail: {formatter:'{value}%',fontSize:12},
+                    data: [{value: 50}],
+                    pointer: {
+                        width:3,//指针的宽度
+                        length:"30%", //指针长度，按照半圆半径的百分比
+                        shadowColor : '#ccc', //默认透明
+                        shadowBlur: 5
+                    },
+
+                    axisLabel: {            // 坐标轴小标记
+                        textStyle: {       // 属性lineStyle控制线条样式
+                           // color: '#000',
+                            fontSize: 9   //改变仪表盘内刻度数字的大小
+                           // shadowColor: '#000' //默认透明
+                        }
+                    }
+                    // itemStyle:{
+                    //     normal:{
+                    //         label:{
+                    //             textStyle:{
+                    //                 fontSize:20
+                    //             }
+                    //         }
+                    //     }
+                    // }
+                }
+            ]
+        };
+
+        setInterval(function () {
+            option.series[0].data[0].value = (Math.random() * 100).toFixed(2) - 0;
+            myChart.setOption(option, true);
+        },2000);
+
+        // 使用刚指定的配置项和数据显示图表。
+        myChart.setOption(option);
+    </script>
+</body>
+</html>
