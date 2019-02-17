@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 @RequestMapping("/echarts")
 public class EchartsController {
-    @RequestMapping("/polyline")
+    @RequestMapping("/double-polyline")
     public String polyline(){
         System.out.println("to_show ======= double-polyline");
         return "/echart/double-polyline";
