@@ -17,4 +17,10 @@ public class EchartsController {
         System.out.println("to_show ======= meter");
         return "/echart/meter";
     }
+
+    @RequestMapping("/sanki")
+    public String sanki(){
+        System.out.println("to_show ======= sanki");
+        return "/echart/sanki";
+    }
 }
