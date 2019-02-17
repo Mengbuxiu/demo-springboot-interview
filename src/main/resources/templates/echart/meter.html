@@ -11,6 +11,7 @@
     <script src="https://cdn.bootcss.com/echarts/4.2.0-rc.2/echarts.min.js"></script>
     <script>
         // 基于准备好的dom，初始化echarts实例
+        // 仪表盘设置 https://blog.csdn.net/k912120/article/details/81739098
         var myChart = echarts.init(document.getElementById('meter'));
 
         var option = {
@@ -46,15 +47,6 @@
                            // shadowColor: '#000' //默认透明
                         }
                     }
-                    // itemStyle:{
-                    //     normal:{
-                    //         label:{
-                    //             textStyle:{
-                    //                 fontSize:20
-                    //             }
-                    //         }
-                    //     }
-                    // }
                 }
             ]
         };
