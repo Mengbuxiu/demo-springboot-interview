@@ -18,9 +18,9 @@ public class EchartsController {
         return "/echart/meter";
     }
 
-    @RequestMapping("/sanki")
+    @RequestMapping("/sankey")
     public String sanki(){
-        System.out.println("to_show ======= sanki");
-        return "/echart/sanki";
+        System.out.println("to_show ======= sankey");
+        return "/echart/sankey";
     }
 }
