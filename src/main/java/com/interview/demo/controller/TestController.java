@@ -11,4 +11,9 @@ public class TestController {
         System.out.println("to_index ================");
         return "index";
     }
+    @RequestMapping("/boot")
+    public String boot(){
+        System.out.println("to_testBootStrap ================");
+        return "testBootStrap";
+    }
 }

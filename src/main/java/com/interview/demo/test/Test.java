@@ -9,7 +9,10 @@ import java.util.List;
 public class Test {
     public static void main(String[] args) {
 //        JSONObject.fromObject("{\"level\":[\"3\"]}");
-
+        //System.out.println(0/100);
+        String url = "local:8080/license/status";
+        int license = url.indexOf("/license/");
+        System.out.println(url.substring(license));
 
         //Object -> Integer || Integer -> Object   都会报编译错误
 //        List<Object> intList = new ArrayList<>(3);
