@@ -1,38 +1,52 @@
 package com.interview.demo.java8_new_feature;
 
+import com.interview.demo.util.DateUtil;
+
 import javax.crypto.Cipher;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.time.DayOfWeek;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.time.temporal.ChronoUnit;
+import java.time.temporal.TemporalField;
 import java.util.Calendar;
 
 public class TestLocalDate {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws ParseException {
+  //      System.out.println(System.currentTimeMillis());
+ //       System.out.println(DateUtil.convertTimeToString(System.currentTimeMillis()));
+
         LocalDate now = LocalDate.now();
-        LocalDate localDate = now.plusMonths(2);
-        System.out.println(localDate.toString());
-        Calendar calendar = Calendar.getInstance();
-        LocalDateTime time = LocalDateTime.now();
-        int hour = time.getHour();
-        int minute = time.getMinute();
-        int second = time.getSecond();
-        StringBuilder sb = new StringBuilder();
-        sb.append(" ");
-        sb.append(hour + ":");
-        sb.append(minute + ":");
-        sb.append(second + ":");
-        try {
-            calendar.setTime(new SimpleDateFormat("yyyy-MM-dd HH:mm:ss")
-                    .parse(localDate.toString()+sb.toString()));
-            System.out.println(calendar.getTimeInMillis());//1553270400000
-        } catch (ParseException e) {
-            e.printStackTrace();
-        }
-        char[] a = new char[1024];
-        String asdsad = String.valueOf(a);
+        LocalDate days = now.minusWeeks(1L);
+        System.out.println(DateUtil.localDate2Millis(now));
+        System.out.println(DateUtil.strToLong());
+
+//        DayOfWeek dayOfWeek = now.getDayOfWeek();
+//        System.out.println(dayOfWeek.getValue());
+
+   //     LocalDate localDate = now.plusMonths(3);
+//        System.out.println(localDate.toString());
+//        Calendar calendar = Calendar.getInstance();
+     //   LocalDateTime time = LocalDateTime.now();
+//        int hour = time.getHour();
+//        int minute = time.getMinute();
+//        int second = time.getSecond();
+//        StringBuilder sb = new StringBuilder();
+//        sb.append(" ");
+//        sb.append(hour + ":");
+//        sb.append(minute + ":");
+//        sb.append(second + ":");
+//        try {
+//            calendar.setTime(new SimpleDateFormat("yyyy-MM-dd HH:mm:ss")
+//                    .parse(localDate.toString()+sb.toString()));
+//            System.out.println(calendar.getTimeInMillis());//1553270400000
+//        } catch (ParseException e) {
+//            e.printStackTrace();
+//        }
+//        char[] a = new char[1024];
+//        String asdsad = String.valueOf(a);
         //Cipher
         // String date = "2019-01-21 23:32:32";
         //String trim = date.trim();
@@ -57,7 +71,7 @@ public class TestLocalDate {
 //        System.out.println(l);
 
 //        System.out.println(System.currentTimeMillis());
-//        LocalDateTime time = LocalDateTime.now();
+        //LocalDateTime time1 = LocalDateTime.now();
 //        System.out.println(time.getHour());
 //        System.out.println(time.getMinute());
 //        System.out.println(time.getSecond());
