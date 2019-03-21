@@ -1,7 +1,13 @@
 package com.interview.demo.util;
 
+import org.springframework.util.Assert;
+
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.time.*;
 import java.time.format.DateTimeFormatter;
+import java.util.Calendar;
+import java.util.Date;
 
 /**
  * 日期时间工具类
@@ -10,8 +16,33 @@ import java.time.format.DateTimeFormatter;
  *
  */
 public class DateUtil {
-	/* JDK8 */
- 
+    /**
+     * 将Long类型的时间戳转换成String 类型的时间格式，时间格式为：yyyy-MM-dd HH:mm:ss
+     */
+    public static String convertTimeToString(Long time){
+        Assert.notNull(time, "time is null");
+        DateTimeFormatter ftf = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+        return ftf.format(LocalDateTime.ofInstant(Instant.ofEpochMilli(time),ZoneId.systemDefault()));
+    }
+
+    /**
+     * 将string 按指定格式转化为java.util.Date
+     * 
+     * @param str
+     * @param format
+     * @return
+     * @throws ParseException
+     */
+    public static Date str2Date(String str, String format)
+            throws ParseException {
+        if (str == null || "".equals(str)) {
+            return null;
+        }
+        SimpleDateFormat sdf = new SimpleDateFormat(format);
+        return (Date) sdf.parse(str);
+    }
+
+
     /** 获取时间戳 */
     public static Long getMillis2() {
         return Instant.now().toEpochMilli();
@@ -27,6 +58,12 @@ public class DateUtil {
         return LocalDateTime.of(localDate, LocalTime.MIN).toInstant(ZoneOffset.ofHours(8)).toEpochMilli();
     }
 
+
+    public static Long strToLong() throws ParseException {
+        Calendar calendar = Calendar.getInstance();
+        calendar.setTime(new SimpleDateFormat("yyyy-MM-dd").parse(LocalDate.now().toString()));
+        return calendar.getTimeInMillis();
+    }
 
     /**
      * yyyyMMddHHmmss

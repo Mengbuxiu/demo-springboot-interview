@@ -6,22 +6,33 @@ import javax.crypto.Cipher;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.time.DayOfWeek;
+import java.time.Duration;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.time.temporal.ChronoUnit;
+import java.time.temporal.TemporalAccessor;
 import java.time.temporal.TemporalField;
 import java.util.Calendar;
 
 public class TestLocalDate {
     public static void main(String[] args) throws ParseException {
   //      System.out.println(System.currentTimeMillis());
- //       System.out.println(DateUtil.convertTimeToString(System.currentTimeMillis()));
+      //  System.out.println(DateUtil.convertTimeToString(System.currentTimeMillis()));
 
-        LocalDate now = LocalDate.now();
-        LocalDate days = now.minusWeeks(1L);
-        System.out.println(DateUtil.localDate2Millis(now));
-        System.out.println(DateUtil.strToLong());
+        //减一小时
+        LocalDateTime now = LocalDateTime.now().minusHours(1);
+        System.out.println(now);
+        Long aLong = DateUtil.localDateTime2Millis(now);
+        System.out.println(aLong);
+        System.out.println(System.currentTimeMillis());
+        // String time =.format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"));
+       // System.out.println(time);
+        // LocalDate hour = now.minus(Duration.ofHours(1));
+      //  System.out.println(hour);
+//        LocalDate days = now.minusWeeks(1L);
+//        System.out.println(DateUtil.localDate2Millis(now));
+//        System.out.println(DateUtil.strToLong());
 
 //        DayOfWeek dayOfWeek = now.getDayOfWeek();
 //        System.out.println(dayOfWeek.getValue());
