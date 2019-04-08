@@ -25,7 +25,7 @@ public class SaxXML {
         }
     }
 
-    public static void createSAX(File file) throws SAXException, TransformerConfigurationException, FileNotFoundException {
+    private static void createSAX(File file) throws SAXException, TransformerConfigurationException, FileNotFoundException {
         // 创建sax转换工厂
         SAXTransformerFactory factory = (SAXTransformerFactory) SAXTransformerFactory.newInstance();
 
