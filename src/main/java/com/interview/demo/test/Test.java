@@ -7,6 +7,12 @@ import java.util.List;
 
 public class Test {
     public static void main(String[] args) {
+
+        List<Integer> a = new ArrayList<Integer>();
+        a.add(1);
+        System.out.println(a.get(2));
+
+
 //        JSONObject.fromObject("{\"level\":[\"3\"]}");
         //System.out.println(0/100);
         String url = "local:8080/license/status";
