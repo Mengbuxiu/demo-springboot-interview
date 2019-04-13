@@ -14,8 +14,8 @@ public class TestFunction {
 //        Function<String, Integer> num = Integer::parseInt;
 ////        Integer cal = 2;
 ////        compute(cal, num);
-        System.out.println(cal1(2, v -> v * 3, v -> v * v));//12
-        System.out.println(cal2(2, v -> v * 3, v -> v * v));//36
+        System.out.println(cal1(2, v -> v * 3, v -> v * v));
+        System.out.println(cal2(2, v -> v * 3, v -> v * v));
     }
 
     private static int cal1(int num, Function<Integer, Integer> fun1, Function<Integer, Integer> fun2) {
