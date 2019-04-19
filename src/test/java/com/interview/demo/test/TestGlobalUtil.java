@@ -11,5 +11,6 @@ import com.interview.demo.util.GlobalUtil;
 public class TestGlobalUtil {
     public static void main(String[] args) {
         System.out.println(GlobalUtil.getWebRootPath());
+
     }
 }
