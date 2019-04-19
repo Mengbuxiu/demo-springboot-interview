@@ -17,17 +17,20 @@ import java.util.Calendar;
 
 public class TestLocalDate {
     public static void main(String[] args) throws ParseException {
-  //      System.out.println(System.currentTimeMillis());
+        String x = LocalDateTime.parse("2019-04-01 10:00:01"
+                ,DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss")).toString();
+        System.out.println(x);
+        //      System.out.println(System.currentTimeMillis());
       //  System.out.println(DateUtil.convertTimeToString(System.currentTimeMillis()));
 
         //减一小时
-        LocalDateTime now = LocalDateTime.of(1,1,1,1,1,1);
-                //.minusHours(1);
-        System.out.println(now.toString());
-        Long aLong = DateUtil.localDateTime2Millis(now);
-        System.out.println(aLong);
-        System.out.println(System.currentTimeMillis());
-         String time =now.format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"));
+//        LocalDateTime now = LocalDateTime.of(1,1,1,1,1,1);
+//                //.minusHours(1);
+//        System.out.println(now.toString());
+//        Long aLong = DateUtil.localDateTime2Millis(now);
+//        System.out.println(aLong);
+//        System.out.println(System.currentTimeMillis());
+//         String time =now.format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"));
        // System.out.println(time);
         // LocalDate hour = now.minus(Duration.ofHours(1));
       //  System.out.println(hour);
