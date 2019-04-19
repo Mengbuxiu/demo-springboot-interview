@@ -25,33 +25,40 @@ public class DescYear {
 
     @Getter
     public enum Season {
-            Spring("WHITE", Arrays.asList(12,1,2)),
-            Summer("GREEN", Arrays.asList(3,4,5)),
-            Autumn("RED", Arrays.asList(6,7,8)),
-            WINTER("YELLOW", Arrays.asList(9,10,11));
+            Spring("WHITE", 1),
+            Summer("GREEN", 2),
+            Autumn("RED", 3),
+            WINTER("YELLOW", 4);
+//            Spring("WHITE", Arrays.asList(12,1,2)),
+//            Summer("GREEN", Arrays.asList(3,4,5)),
+//            Autumn("RED", Arrays.asList(6,7,8)),
+//            WINTER("YELLOW", Arrays.asList(9,10,11));
 
 
         private String color;
-        private List<Integer> monthList;
+        private Integer monthList;
 
-        public static String from(List<Integer> list,Integer m){
-            for (Season season : Season.values()) {
-                for (Integer integer : season.getMonthList()) {
-                    for (Integer i : list) {
-                        if (m.equals(i)) {
-                            return season.getColor();
-                        }
-                    }
-                }
-            }
-            return "";
+        public static String from(Integer month,Integer m){
+
+//            for (Season season : Season.values()) {
+//                for (Integer integer : season.getMonthList()) {
+//                    for (Integer i : list) {
+//                        if (m.equals(i)) {
+//                            return season.getColor();
+//                        }
+//                    }
+//                }
+//            }
+            return "success";
         }
 
-        public List<Integer> getMonthList() {
+        public Integer getMonthList() {
             return this.monthList;
         }
 
-        Season(String color, List<Integer> month) {
+        Season() {}
+
+        Season(String color, Integer month) {
             this.color = color;
             this.monthList = month;
         }
