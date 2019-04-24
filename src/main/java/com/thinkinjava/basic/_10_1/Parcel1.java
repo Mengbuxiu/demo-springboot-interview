@@ -4,7 +4,7 @@ import sun.security.krb5.internal.crypto.Des;
 
 /**
  * @author Administrator
- * @desc //创建内部类
+ * @desc //创建内部类。
  * @date 2019/4/23
  */
 public class Parcel1 {
