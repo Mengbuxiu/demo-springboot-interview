@@ -1,6 +1,5 @@
 package com.thinkinjava.basic._10_1;
 
-import sun.security.krb5.internal.crypto.Des;
 
 /**
  * @author Administrator
