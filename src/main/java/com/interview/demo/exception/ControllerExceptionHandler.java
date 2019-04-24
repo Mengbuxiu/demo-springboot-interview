@@ -11,6 +11,9 @@ import javax.servlet.http.HttpServletRequest;
 public class ControllerExceptionHandler {
     private static final String ERROR_VIEW = "error";
 
+    /**
+     * controller异常捕捉
+     */
     //@ExceptionHandler(Exception.class)
 //    public Object errorHandler(HttpServletRequest request, Exception e) {
 //        e.printStackTrace();

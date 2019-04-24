@@ -7,6 +7,6 @@ public class TestGetInt {
         String ips = "{\"ip\":null}";
         JSONObject parse = JSONObject.parseObject(ips);
         Integer ip = parse.getInteger("ip");
-
+        System.out.println("ip = " + ip);
     }
 }
