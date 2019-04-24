@@ -1,5 +1,7 @@
 package com.interview.demo.cache;
 
+import net.sf.ehcache.Element;
+import org.springframework.cache.Cache;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 
