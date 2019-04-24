@@ -1,6 +1,5 @@
 package com.thinkinjava.basic._10_2;
 
-import net.sf.ehcache.pool.Size;
 
 /**
  * 据说这是一个微缩版的迭代器实现
