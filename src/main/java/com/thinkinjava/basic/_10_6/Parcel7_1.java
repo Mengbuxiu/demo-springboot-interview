@@ -7,12 +7,12 @@ package com.thinkinjava.basic._10_6;
  * @date 2019/4/26 18:27
  */
 public class Parcel7_1 {
-    @FunctionalInterface
     public interface Coder{
         Coder go(String dest);
     }
 
     public static Coder coder() {
+        //相当于对接口做了个匿名类实现
         return new Coder() {
             @Override
             public Coder go(String dest) {
