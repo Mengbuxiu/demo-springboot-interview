@@ -20,6 +20,13 @@
     </properties>
 
     <dependencies>
+        <!-- https://mvnrepository.com/artifact/com.google.guava/guava -->
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>27.0.1-jre</version>
+        </dependency>
+
         <!--因配置外部TOMCAT 而配置-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
