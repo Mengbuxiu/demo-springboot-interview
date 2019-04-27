@@ -36,9 +36,18 @@ public class UserApi {
          * org.springframework.beans.BeanUtils#copyProperties 对代码进行重构和优化：
          */
 
-        /*User user = new User();
-        user.setUserName(userInputDTO.getUserName());
-        user.setAge(userInputDTO.getAge());*/
+        /**
+         * 这样写显得很繁琐，还不易读，用@Accessors(chain = true)
+         */
+        /*User user1 = new User();
+        user1.setUserName(userInputDTO.getUserName());
+        user1.setAge(userInputDTO.getAge());*/
+        /**
+         * 这样写是不是很舒服
+         * 关于链式调用可以参考src\main\java\com\thinkinjava\basic\_10_6\Parcel7_1.java
+         */
+        User user2 = new User();
+        user2.setUserName("Alin").setAge(11);
         /**
          * BeanUtils.copyProperties 是一个浅拷贝方法，复制属性时，
          * 我们只需要把
