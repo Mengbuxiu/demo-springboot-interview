@@ -1,18 +1,20 @@
-package com._wx_public.yudaoyuanma.entity;
+package com._wx_public.yudaoyuanma.dto;
 
 import lombok.Getter;
 import lombok.Setter;
-import lombok.ToString;
 
 /**
  * @author Administrator
- * @desc //TODO
+ * @desc //封装的用户传输对象
  * @date 2019/4/27
  */
 @Setter
 @Getter
-@ToString
-public class User {
+public class UserInputDTO {
     private String userName;
     private Integer age;
+    /**
+     * 0 女，1 男
+     */
+    private Byte sex;
 }

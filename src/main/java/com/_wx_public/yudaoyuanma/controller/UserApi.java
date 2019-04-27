@@ -1,5 +1,6 @@
 package com._wx_public.yudaoyuanma.controller;
 
+import com._wx_public.yudaoyuanma.dto.UserInputDTO;
 import com._wx_public.yudaoyuanma.entity.User;
 import com._wx_public.yudaoyuanma.service.UserService;
 import org.springframework.beans.BeanUtils;
@@ -27,7 +28,7 @@ public class UserApi {
     }
 
     @PostMapping
-    public User addUser(User userInputDTO){
+    public User addUser(UserInputDTO userInputDTO){
         /**
          * 上边的代码，从逻辑上讲，是没有问题的，只是这种写法让我很厌烦，例子中只有两个字段，如果有 20 个字段，我们要如何做呢？
          * 一个一个进行 set 数据吗？当然，如果你这么做了，肯定不会有什么问题，但是，这肯定不是一个最优的做法。
@@ -56,7 +57,7 @@ public class UserApi {
         return userService.addUser(user);
     }
 
-    private User convertFor(User userInputDTO) {
+    private User convertFor(UserInputDTO userInputDTO) {
         User user = new User();
         BeanUtils.copyProperties(userInputDTO,user);
         return user;
