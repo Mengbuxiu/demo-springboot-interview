@@ -8,7 +8,7 @@ package com.thinkinjava.basic._10_7;
  */
 public class TestBed {
 //    这是实现的接口
-    static void test(){
+    public static void test(){
         System.out.println("This is a static method");
     }
     public void f() {

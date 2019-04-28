@@ -5,6 +5,7 @@ package com.thinkinjava.basic._10_7;
  * @version 1.0
  * @description // 一个内部类被嵌套多少层并不重要,它可以完全访问外部类的所有成员
  * @date 2019/4/28 14:00
+ * ".new()"能产生正确的作用域,所以不必在调用构造器时限定类名
  */
 class MNA {
     private void f(){}

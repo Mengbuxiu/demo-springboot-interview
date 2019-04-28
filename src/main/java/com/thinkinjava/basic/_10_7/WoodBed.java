@@ -25,7 +25,10 @@ public class WoodBed implements Bed {
          * static Type methodName不就好了?
          * 反正调用时都是
          * Clazz.methodName
-         * 有毒的吧
+         * 有毒的吧...
+         * 很奇怪吗?
+         * public 的意思是在整个项目中都可以调用 Clazz.methodName
+         * 不写public你调个试试!
          */
         Bed.tear();
         TestBed.test();
