@@ -8,12 +8,7 @@ import java.time.format.FormatStyle;
 import java.time.temporal.ChronoField;
 import java.time.temporal.ChronoUnit;
 
-public class OuterClass {
-    //成员内部类
-    private class InstanceInnerClass{}
-
-    //静态内部类
-    static class StaticInnerClass{}
+public class TestChronoUnit {
 
     public static void main(String[] args) {
 //        final DayOfWeek[] values = DayOfWeek.values();
