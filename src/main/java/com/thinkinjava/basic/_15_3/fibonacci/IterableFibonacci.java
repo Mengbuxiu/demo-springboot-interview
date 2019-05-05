@@ -15,6 +15,9 @@ public class IterableFibonacci extends Fibonacci implements Iterable<Integer> {
 
     private int n;
 
+    /**
+     * @param count 边界值
+     */
     public IterableFibonacci(int count){
         n = count;
     }
@@ -28,6 +31,9 @@ public class IterableFibonacci extends Fibonacci implements Iterable<Integer> {
     @Override
     public Iterator<Integer> iterator() {
         return new Iterator<Integer>() {
+            /**
+             * @return 判断边界值
+             */
             @Override
             public boolean hasNext() {
                 return n > 0;
