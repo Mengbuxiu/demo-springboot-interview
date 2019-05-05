@@ -18,6 +18,13 @@ public class IterableFibonacci extends Fibonacci implements Iterable<Integer> {
     public IterableFibonacci(int count){
         n = count;
     }
+
+    /**
+     * implements Iterable<Integer> override iterator()
+     * 则 会有匿名内部类的实现，必须重写hasNext(),next()方法，
+     * 因为Iterator是个接口
+     * @return
+     */
     @Override
     public Iterator<Integer> iterator() {
         return new Iterator<Integer>() {
@@ -29,6 +36,7 @@ public class IterableFibonacci extends Fibonacci implements Iterable<Integer> {
             @Override
             public Integer next() {
                 n--;
+                //生成对外部类对象的引用，可以使用外部类.this
                 return IterableFibonacci.this.next();
             }
         };
