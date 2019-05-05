@@ -1,4 +1,4 @@
-package com.thinkinjava.basic._15_3;
+package com.thinkinjava.basic._15_3.interf;
 
 /**
  * @author Alin

@@ -1,4 +1,4 @@
-package com.thinkinjava.basic._15_3;
+package com.thinkinjava.basic._15_3.coffee;
 
 /**
  * @author Alin
@@ -6,5 +6,5 @@ package com.thinkinjava.basic._15_3;
  * @description // TODO
  * @date 2019/5/5 14:08
  */
-public class Breve extends Coffee {
+public class Mocha extends Coffee {
 }

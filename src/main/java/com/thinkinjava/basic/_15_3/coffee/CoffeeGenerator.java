@@ -1,4 +1,6 @@
-package com.thinkinjava.basic._15_3;
+package com.thinkinjava.basic._15_3.coffee;
+
+import com.thinkinjava.basic._15_3.interf.Generator;
 
 import javax.validation.constraints.NotNull;
 import java.lang.reflect.InvocationTargetException;
