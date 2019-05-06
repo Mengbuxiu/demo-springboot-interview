@@ -29,7 +29,9 @@ import static java.lang.System.*;
  * }
  *
  * 所谓的代理模式，就是不直接去调用某个方法，而是去调用代理的方法，让代理去调用你需要调用的方法
+ * 代理类和被代理类应该共同实现一个接口，或者是共同继承某个类。
  *
+ * 注释中代理类ProxyC和被代理类B都实现了接口A，ProxyC调用接口A的方法实现时会调用自身的接口A实现，然后再去调B的A方法实现
  */
 interface Interface {
     void doSomething();
