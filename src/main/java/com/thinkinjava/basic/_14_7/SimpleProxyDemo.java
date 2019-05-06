@@ -58,26 +58,26 @@ class SimpleProxy implements Interface {
 
     @Override
     public void doSomething() {
-        out.println("SimpleProxy doSomething()");
+        out.println("SimpleProxy proxied.doSomething() -> 我将代理外部对RealObject doSomething()的调用");
         proxied.doSomething();
     }
 
     @Override
     public void somethingElse(String args) {
-        out.println(String.format("SimpleProxy somethingElse(%s) " ,args));
+        out.println(String.format("SimpleProxy proxied.somethingElse(%s) -> 我将代理外部对RealObject somethingElse(%s)的调用" ,args,args));
         proxied.somethingElse(args);
     }
 }
 
 class SimpleProxyDemo{
     public static void main(String[] args) {
-        cosumer(new RealObject());
+        consumer(new RealObject());
         out.println();
-        cosumer(new SimpleProxy(new RealObject()));
+        consumer(new SimpleProxy(new RealObject()));
         out.println();
     }
 
-    private static void cosumer(Interface proxied) {
+    private static void consumer(Interface proxied) {
         proxied.doSomething();
         proxied.somethingElse(" fuck world ");
     }
