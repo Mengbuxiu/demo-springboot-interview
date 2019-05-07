@@ -33,12 +33,16 @@ import static java.lang.System.*;
  *
  * 注释中代理类ProxyC和被代理类B都实现了接口A，ProxyC调用接口A的方法实现时会调用自身的接口A实现，然后再去调B的A方法实现
  */
-interface Interface {
+
+/**
+ * 能做什么事情
+ */
+interface Subject {
     void doSomething();
     void somethingElse(String args);
 }
 
-class RealObject implements Interface {
+class RealObject implements Subject {
 
     @Override
     public void doSomething() {
@@ -51,10 +55,10 @@ class RealObject implements Interface {
     }
 }
 
-class SimpleProxy implements Interface {
-    private Interface proxied;
+class SimpleProxy implements Subject {
+    private Subject proxied;
 
-    SimpleProxy(Interface anInterface){
+    SimpleProxy(Subject anInterface){
         this.proxied = anInterface;
     }
 
@@ -79,7 +83,7 @@ class SimpleProxyDemo{
         out.println();
     }
 
-    private static void consumer(Interface proxied) {
+    private static void consumer(Subject proxied) {
         proxied.doSomething();
         proxied.somethingElse(" fuck world ");
     }

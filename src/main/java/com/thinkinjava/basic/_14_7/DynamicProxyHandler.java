@@ -4,7 +4,6 @@ import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
 import java.lang.reflect.Proxy;
 import java.util.Arrays;
-import java.util.Random;
 
 /**
  * @author Alin
@@ -23,7 +22,7 @@ class DynamicProxyHandler implements InvocationHandler {
     @Override
     public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
         System.out.println(String.format("*** proxy: %s , method: %s , args: %s",
-                proxy.getClass(), method, Arrays.toString(args)));
+                proxy.getClass().getSimpleName(), method, Arrays.toString(args)));
 
         if (args != null) {
             for (Object arg : args) {
@@ -36,17 +35,17 @@ class DynamicProxyHandler implements InvocationHandler {
 
 class SimpleDynamicProxy{
     public static void main(String[] args) {
-        RealObject real = new RealObject();
+        Subject real = new RealObject();
         consumer(real);
-
-        Interface proxyInstance = (Interface) Proxy.newProxyInstance(Interface.class.getClassLoader(),
-                new Class[]{Interface.class},
+        System.out.println("" + Subject.class.getSimpleName());
+        Subject proxyInstance = (Subject) Proxy.newProxyInstance(Subject.class.getClassLoader(),
+                new Class[]{Subject.class},
                 new DynamicProxyHandler(real));
         consumer(proxyInstance);
     }
 
-    private static void consumer(Interface anInterface) {
-        anInterface.doSomething();
-        anInterface.somethingElse(" fuck world ");
+    private static void consumer(Subject anSubject) {
+        anSubject.doSomething();
+        anSubject.somethingElse(" fuck world ");
     }
 }
