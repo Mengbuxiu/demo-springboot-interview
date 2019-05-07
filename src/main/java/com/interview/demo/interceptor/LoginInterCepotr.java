@@ -28,34 +28,29 @@ public class LoginInterCepotr implements HandlerInterceptor {
             response.sendRedirect(request.getContextPath() + "/to_login_page");
             return false;
         }
-        /**
-         * 用户已登陆，在登陆的controller里session.setAttr("userId", User)
-         * 然后这里就可以
-         * User user = (User)session.getAttr("userId");
-         * CURRENT_USER.set(new HashMap<String, User>(){{
-         *             put(user.getId(),user);
-         *  }});
-         */
         return true;
     }
 
-    private static final ThreadLocal<HashMap<String, User>> CURRENT_USER = new ThreadLocal<>();
-    private static ThreadLocal<HashMap<String, User>> getCurrentThread() {
+    /**
+     * 一个意思
+     * https://blog.csdn.net/kiloyip/article/details/80171782
+     */
+    private static final ThreadLocal<User> CURRENT_USER = new ThreadLocal<>();
+    private static ThreadLocal<User> getCurrentThread() {
         return CURRENT_USER;
     }
-    public void setCurrentUser(HashMap<String, User> map) {
-        if (map != null) {
-            getCurrentThread().set(map);
+    public void setCurrentUser(User user) {
+        if (user != null) {
+            getCurrentThread().set(user);
         }
     }
     /**
      * 暴露给外部调用
      * 获取当前用户
-     * @param userId
      * @return
      */
-    public User getCurrentUser(String userId) {
+    public User getCurrentUser() {
         //第一个get是获取当前线程，每一个用户就是一个线程
-        return getCurrentThread().get().get(userId);
+        return getCurrentThread().get();
     }
 }
