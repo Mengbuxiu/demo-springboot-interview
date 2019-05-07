@@ -28,6 +28,10 @@ public class LoginInterCepotr implements HandlerInterceptor {
             response.sendRedirect(request.getContextPath() + "/to_login_page");
             return false;
         }
+        /**
+         * User user = (User) session.getAttribute("user");
+         * CURRENT_USER.set(user);
+         */
         return true;
     }
 
