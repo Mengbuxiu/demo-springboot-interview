@@ -24,8 +24,12 @@ public class TestStaticFinal {
     private static int age = 0;
     private static final int[] ageArr = {1,2,3};
     private static final Person p = new Person("zz",11);
+    private static final String s = null;
+
 
     public static void main(String[] args) {
+        System.out.println(s);
+        //s = "11";
         age = 1;
         System.out.println(Arrays.toString(ageArr));
         ageArr[1] = 111;
