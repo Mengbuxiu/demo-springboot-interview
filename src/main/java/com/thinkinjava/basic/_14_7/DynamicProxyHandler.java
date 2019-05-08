@@ -8,7 +8,7 @@ import java.util.Arrays;
 /**
  * @author Alin
  * @version 1.0
- * @description // java代理模式
+ * @description // 代理类
  * @date 2019/4/30 16:28
  */
 class DynamicProxyHandler implements InvocationHandler {
@@ -33,13 +33,32 @@ class DynamicProxyHandler implements InvocationHandler {
     }
 }
 
+/**
+ * 测试demo
+ * Q:为什么称为动态代理？
+ * A:实现InvocationHandler的代理类是每个需要被代理的接口所共用的，内部不会写死某个接口，
+ *  而是在外部以数组的方式传递进去
+ */
 class SimpleDynamicProxy{
     public static void main(String[] args) {
+        /**
+         *  需要被代理的接口 real = new 被代理类
+         */
         Subject real = new RealObject();
         consumer(real);
-        System.out.println("" + Subject.class.getSimpleName());
-        Subject proxyInstance = (Subject) Proxy.newProxyInstance(Subject.class.getClassLoader(),
+        /**
+         *  Proxy.newProxyInstance(定义代理类的类加载器[事实上系统的类加载器也是可以的], Clazz[能够被代理的接口], 代理类[被代理接口])
+         */
+        Subject proxyInstance = (Subject) Proxy.newProxyInstance(
+                /**
+                 * 以下三种都可以
+                 * 原因是 他们都是使用的AppClassLoader
+                 * */
+                ClassLoader.getSystemClassLoader()
+                /*DynamicProxyHandler.class.getClassLoader()*/
+                /*InvocationHandler.class.getClassLoader()*/,
                 new Class[]{Subject.class},
+                /** 代理类 (被代理类), 注入需要被代理的接口 */
                 new DynamicProxyHandler(real));
         consumer(proxyInstance);
     }
