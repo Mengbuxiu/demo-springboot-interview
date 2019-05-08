@@ -9,7 +9,7 @@ package com.java_feature.class_path;
 public class TestClassPath {
     public static void main(String[] args) {
         System.out.println(System.getProperty("jdk.internal.loader.ClassLoaders"));
-        System.out.println(TestClassPath.class.getClassLoader());
+
         System.out.println("---------------------------------");
         String class_path = System.getProperty("java.class.path");
         String[] split = class_path.split(";");
