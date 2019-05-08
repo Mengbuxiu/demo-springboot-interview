@@ -20,4 +20,21 @@ package com.java_feature.class_loader;
  *      为啥能让它特殊我也不知道，but
  *      震惊！private ClassLoader(Void unused, String name, ClassLoader parent)
  *      Void 竟然也是个类型！包装类！
+ *
+ *
+ * 父加载器  爷爷级 <-爸爸级 <- 儿子级
+ * BootClassLoader <- PlatformClassLoader <- AppClassLoader
+ * 看起来好像 BootClassLoader 是最高级，但是运行以下代码就会发现
+ *      public class TestClassLoader {
+ *          public static void main(String[] args) {
+ *              System.out.println(TestClassLoader.class.getClassLoader());
+ *              System.out.println(TestClassLoader.class.getClassLoader().getParent());
+ *              System.out.println(TestClassLoader.class.getClassLoader().getParent().getParent());
+ *          }
+ *      }
+ *      // 输出结果：
+ *      // jdk.internal.loader.ClassLoaders$AppClassLoader@2437c6dc
+ *      // jdk.internal.loader.ClassLoaders$PlatformClassLoader@4bbfb90a
+ *      // null
+ *      第三个值输出为null，why？
  */
