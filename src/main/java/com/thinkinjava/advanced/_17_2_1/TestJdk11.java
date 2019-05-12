@@ -1,4 +1,4 @@
-package com.thinkinjava.basic._17_2_1;
+package com.thinkinjava.advanced._17_2_1;
 
 /**
  * @author Alin
