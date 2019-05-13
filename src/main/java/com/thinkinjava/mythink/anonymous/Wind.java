@@ -1,4 +1,4 @@
-package com.thinkinjava.basic.mythink.anonymous;
+package com.thinkinjava.mythink.anonymous;
 
 /**
  * @author Alin
