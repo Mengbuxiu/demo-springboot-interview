@@ -14,3 +14,4 @@ public class WebMvcConfigurerInterCeptor implements WebMvcConfigurer {
         r.excludePathPatterns("/error").excludePathPatterns("/login");
     }
 }
+ 
