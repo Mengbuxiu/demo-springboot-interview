@@ -1,8 +1,10 @@
 package com.thinkinjava.advanced._17_2_1;
 
 import com.thinkinjava.basic._15_3.interf.Generator;
+import com.thinkinjava.basic._17_2_1.RandomGenerator;
 
 import java.util.LinkedHashSet;
+import java.util.Random;
 import java.util.Set;
 
 /**
@@ -26,5 +28,6 @@ public class CollectionDataTest {
         // 求set和传入set的并集。
         set.addAll(CollectionData.list(new Government(),4));
         System.out.println(set);
+        new CollectionData<>(new RandomGenerator.Strings(9),10);
     }
 }
