@@ -11,7 +11,7 @@ import java.rmi.registry.LocateRegistry;
 * 创建RMI注册表，启动RMI服务，并将远程对象注册到RMI注册表中。
 */ 
 public class HelloServer { 
-    public static void main(String args[]) { 
+    public static void main(String[] args) {
 
         try { 
             //创建一个远程对象 
