@@ -8,6 +8,7 @@ import java.rmi.RemoteException;
 /**
 * Created by IntelliJ IDEA. 
 * 客户端测试，在客户端调用远程对象上的远程方法，并返回结果。
+ * 代理类
 */ 
 public class HelloClient { 
     public static void main(String[] args){

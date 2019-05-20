@@ -6,6 +6,7 @@ import java.rmi.server.UnicastRemoteObject;
 /**
 * Created by IntelliJ IDEA. 
 * 远程的接口的实现
+ * 代理接口的实现，不直接操作，由代理类操作
 */ 
 public class HelloImpl extends UnicastRemoteObject implements IHello {
     /** 
