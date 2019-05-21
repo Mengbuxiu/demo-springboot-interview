@@ -1,4 +1,6 @@
-package com.thinkinjava.advanced._21_2;
+package com.thinkinjava.advanced._21_2._1;
+
+import com.thinkinjava.advanced._21_2._1.LiftOff;
 
 /**
  * @author Alin

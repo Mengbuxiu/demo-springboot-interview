@@ -1,16 +1,21 @@
-package com.thinkinjava.advanced._21_2;
+package com.thinkinjava.advanced._21_2._3;
+
+import com.thinkinjava.advanced._21_2._1.LiftOff;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 /**
  * @author Alin
- * @desc //使用同一个线程，并排队
+ * @desc //TODO
  * @date 2019/5/20
  */
-public class SingleThreadExecutor {
+public class CachedThreadPool {
     public static void main(String[] args) {
-        ExecutorService exec = Executors.newSingleThreadExecutor();
+        /**
+         * newCachedThreadPool可以方便的替换
+         * */
+        ExecutorService exec = Executors.newCachedThreadPool();
         for (int i = 0; i < 5; i++) {
             exec.execute(new LiftOff());
         }

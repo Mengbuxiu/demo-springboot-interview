@@ -1,4 +1,6 @@
-package com.thinkinjava.advanced._21_2;
+package com.thinkinjava.advanced._21_2._2;
+
+import com.thinkinjava.advanced._21_2._1.LiftOff;
 
 /**
  * @author Alin
@@ -12,8 +14,6 @@ public class BasicThreads {
         // 注意控制台打印的数据结果，由一个线程开启另一个线程，
         // 两个线程会交替执行
         System.out.println("Waiting for Liftoff:");
-        for (int i = 0; i < 100000; i++) {
-            System.out.println(i);
-        }
+
     }
 }
