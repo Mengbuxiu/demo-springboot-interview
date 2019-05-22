@@ -1,0 +1,59 @@
+package com.thinkinjava.advanced._21_2._11;
+
+/**
+ * @author Alin
+ * @desc //睡眠指定时间
+ * @date 2019/5/22
+ */
+public class Sleeper extends Thread {
+    /**
+     * 睡眠时间
+     */
+    private int duration;
+
+    /**
+     * 调用此构造器同时启动线程
+     * @param name 线程名
+     * @param sleepTime 睡眠时间
+     */
+    public Sleeper(String name, int sleepTime ) {
+        super(name);
+        duration = sleepTime;
+        start();
+    }
+
+    @Override
+    public void run() {
+        try {
+            sleep(duration);
+            System.out.println(getName() + " isAlive ? " + isAlive());
+        } catch (InterruptedException e) {
+            System.out.println(String.format("%s was interrupted.\tisInterrupted(): %s", getName(), isInterrupted()));
+        }
+        System.out.println(getName() + " has awakened");
+    }
+}
+
+/**
+ * 线程加入
+ */
+class Joiner extends Thread {
+    private Sleeper sleeper;
+
+    public Joiner(String name, Sleeper sleeper) {
+        super(name);
+        this.sleeper = sleeper;
+        start();
+    }
+
+    @Override
+    public void run() {
+        try {
+            sleeper.join();
+        } catch (InterruptedException e) {
+            //System.out.println("Interrupted");
+        }
+        System.out.println(getName() + " join completed");
+    }
+}
+
