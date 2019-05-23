@@ -6,7 +6,13 @@ public class Joining {
                 //sleeper = new Sleeper("睡眠线程-1", 1500),
                 grumpy = new Sleeper("睡眠线程-2", 1500);
                //new Joiner("Join线程-1", sleeper);
-               new Joiner("Join线程-2", grumpy);
+               //new Joiner("Join线程-2", grumpy);
+        /**
+         * If this thread is blocked in an invocation of the
+         * wait(),join(),sleep
+         * then its interrupt status will be cleared and it
+         * will receive an {@link InterruptedException}.
+         */
         grumpy.interrupt();
     }
 }

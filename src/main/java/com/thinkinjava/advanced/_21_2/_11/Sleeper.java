@@ -20,13 +20,16 @@ public class Sleeper extends Thread {
         super(name);
         duration = sleepTime;
         start();
+        System.out.println(name + " 线程启动");
     }
 
     @Override
     public void run() {
         try {
+            //System.out.println(getName() + " isAlive ? " + isAlive());
+            System.out.println(getName() + " " + this.getState().name());
             sleep(duration);
-            System.out.println(getName() + " isAlive ? " + isAlive());
+            System.out.println(getName() + " " + this.getState().name());
         } catch (InterruptedException e) {
             System.out.println(String.format("%s was interrupted.\tisInterrupted(): %s", getName(), isInterrupted()));
         }
@@ -44,14 +47,17 @@ class Joiner extends Thread {
         super(name);
         this.sleeper = sleeper;
         start();
+        System.out.println(name + " 线程启动");
     }
 
     @Override
     public void run() {
         try {
+            System.out.println(getName() + " " + this.getState().name());
             sleeper.join();
+            System.out.println(getName() + " " + this.getState().name());
         } catch (InterruptedException e) {
-            //System.out.println("Interrupted");
+            System.out.println(getName()+"was Interrupted");
         }
         System.out.println(getName() + " join completed");
     }
