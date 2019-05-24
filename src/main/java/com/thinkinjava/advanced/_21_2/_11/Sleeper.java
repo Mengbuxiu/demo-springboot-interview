@@ -20,7 +20,7 @@ public class Sleeper extends Thread {
         super(name);
         duration = sleepTime;
         start();
-        System.out.println(name + " 线程启动");
+        //System.out.println(name + " 线程启动");
     }
 
     @Override
@@ -29,7 +29,6 @@ public class Sleeper extends Thread {
             //System.out.println(getName() + " isAlive ? " + isAlive());
             System.out.println(getName() + " " + this.getState().name());
             sleep(duration);
-            System.out.println(getName() + " " + this.getState().name());
         } catch (InterruptedException e) {
             System.out.println(String.format("%s was interrupted.\tisInterrupted(): %s", getName(), isInterrupted()));
         }
