@@ -1,9 +1,10 @@
 package com.shenruqianchu_concurrent._1;
 
 
+import org.junit.jupiter.api.Test;
+
 import java.util.concurrent.atomic.AtomicInteger;
 
-import org.junit.Test;
 
 //import static org.junit.Assert.*;
 import static org.junit.jupiter.api.Assertions.*;
