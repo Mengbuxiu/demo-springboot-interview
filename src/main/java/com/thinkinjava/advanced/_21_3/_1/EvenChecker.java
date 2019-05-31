@@ -8,7 +8,7 @@ import java.util.concurrent.Executors;
 /**
  * @author Alin
  * @version 1.0
- * @description // 消费者，检查偶数的有效性
+ * @description // 消费者任务，检查偶数的有效性
  * @date 2019/5/24 21:18
  */
 public class EvenChecker implements Runnable {
@@ -24,8 +24,8 @@ public class EvenChecker implements Runnable {
     public void run() {
         while (!generator.isCanceled()) {
             int val = generator.next();
-            if (0 == val % 2) {
-                System.out.println(val + " not even!");
+            if (0 != val % 2) {
+                System.out.println(val + " %2 != 0");
                 generator.cancel();
             }
         }
