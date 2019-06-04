@@ -21,6 +21,7 @@ public class DateUtil {
      */
     public static String convertTimeToString(Long time){
         Assert.notNull(time, "time is null");
+        //DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss").format(LocalDateTime.ofInstant(Instant.ofEpochMilli(time),ZoneId.systemDefault()))
         DateTimeFormatter ftf = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
         return ftf.format(LocalDateTime.ofInstant(Instant.ofEpochMilli(time),ZoneId.systemDefault()));
     }
