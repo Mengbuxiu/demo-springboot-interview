@@ -1,4 +1,4 @@
-package com.java_concurrent._2_2._1;
+package com.java_concurrent._2._2._1;
 
 /**
  * @author Alin
