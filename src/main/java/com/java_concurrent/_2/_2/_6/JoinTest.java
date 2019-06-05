@@ -14,8 +14,13 @@ public class JoinTest {
             for (; i < 10000000; i++);
         });
         thread.start();
-        //不使用join和sleep很有可能得到0
-        //Thread.sleep(1);
+        //不使用join()很有可能得到0
+        //这行代码的意思是让子线程活动10ms，然后死亡
+        //join(0)代表一直活动直到子线程死亡
+        thread.join(10);
+        //按照官方文档的意思是：等待这个线程死亡
+        //换句话说，只有这个线程死亡了，主线程才能继续往下执行，
+        //所以，join在此是阻塞了主线程，来执行子线程
         //thread.join();
         System.out.println(i);
     }
