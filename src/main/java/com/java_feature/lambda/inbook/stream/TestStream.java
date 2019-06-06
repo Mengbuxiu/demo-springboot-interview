@@ -6,6 +6,8 @@ import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 /**
  * @author Alin
@@ -47,5 +49,10 @@ public class TestStream {
         long count = artists.stream().filter(
                 (art) -> "1".equals(art.getOrigin())).count();
         System.out.println(count);
+    }
+    @Test
+    void doStreamOf(){
+        List<String> list = Stream.of("a", "b", "c").collect(Collectors.toList());
+        list.forEach(System.out::println);
     }
 }
