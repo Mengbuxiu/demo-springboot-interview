@@ -6,7 +6,7 @@ import java.util.concurrent.locks.ReentrantLock;
 /**
  * @author Alin
  * @version 1.0
- * @description // TODO
+ * @description // 线程状态
  * @date 2019/6/5 17:14
  */
 public class TimeLock {
@@ -36,7 +36,7 @@ public class TimeLock {
         };
         Thread t1 = new Thread(runnable,"线程-1");
         Thread t2 = new Thread(runnable,"线程-2");
-        // new 线程代表就绪状态，同一起跑线，start代表运行状态
+        // new 线程代表新建状态，同一起跑线，start代表就绪状态，获得cpu时间片后运行run方法代表运行状态
         t2.start();
         t1.start();
     }
