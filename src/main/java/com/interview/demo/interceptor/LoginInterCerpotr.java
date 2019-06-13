@@ -46,7 +46,7 @@ public class LoginInterCerpotr implements HandlerInterceptor {
          * User user = (User) session.getAttribute("user");
          * CURRENT_USER.set(user);
          */
-        return false;
+        return true;
     }
 
     /**
