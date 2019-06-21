@@ -44,7 +44,7 @@ public class DateUtil {
     }
 
 
-    /** 获取时间戳 */
+    /** 获取时间戳 可用*/
     public static Long getMillis2() {
         return Instant.now().toEpochMilli();
     }
@@ -103,8 +103,8 @@ public class DateUtil {
     }
 
     /**
-     * 获取当前的微秒数
-     * 
+     * 获取当前的毫秒数 可用
+     * jdk11
      * @return
      */
     public static long getClockMillis() {

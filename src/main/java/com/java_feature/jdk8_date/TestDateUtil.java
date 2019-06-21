@@ -13,8 +13,9 @@ import java.time.format.DateTimeFormatter;
  */
 public class TestDateUtil {
     public static void main(String[] args) {
-        LocalDateTime time = DateUtil.parseLocalDateTime("2019-04-16 13:00:00");
-        LocalDateTime time1 = time.plusHours(1);
-        System.out.println(time1.format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss")));
+        System.out.println(DateUtil.getMillis2() == System.currentTimeMillis());
+//        LocalDateTime time = DateUtil.parseLocalDateTime("2019-04-16 13:00:00");
+//        LocalDateTime time1 = time.plusHours(1);
+//        System.out.println(time1.format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss")));
     }
 }
