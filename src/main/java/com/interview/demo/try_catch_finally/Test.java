@@ -6,20 +6,23 @@ public class Test {
     private static int z = 1;
 
     public static void main(String[] args) {
-        int val = finallyValue();
-        System.out.println("x = " + val);
-        System.out.println("y = " + val);
-        System.out.println("z = " + val);
+        finallyValue();
+        System.out.println("x = " + x);
+        System.out.println("y = " + y);
+        System.out.println("z = " + z);
     }
 
     private static int finallyValue() {
         try {
-            return x++;
+            return 1/0;
         } catch (Exception e) {
             e.printStackTrace();
+            //异常时finally也会执行
             return y++;
         } finally {
-            return z++;
+            System.out.println("finally");
+            //finally 中 不能写return，这里return了try中的return就不执行了
+            //return z++;
         }
     }
 }
