@@ -13,19 +13,20 @@ import java.util.List;
 public class TestFor {
     /**
      * 被注解的方法将在当前类中的每个 @Test 方法前执行。
-     *  <=> junit 4 的@Before
+     * <=> junit 4 的@Before
      */
 
     public static void main(String[] args) {
 
-        List<Integer>   list = new ArrayList<Integer>(3){{
+        List<Integer> list = new ArrayList<Integer>(3) {{
             add(1);
             add(2);
             add(3);
         }};
 
         for (Integer integer : list) {
-            System.out.println(integer);
+            if (1 == integer)
+                System.out.println(integer);
         }
 
         //list.forEach(System.out::println);
