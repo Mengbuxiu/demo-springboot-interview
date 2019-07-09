@@ -13,6 +13,14 @@ import java.io.IOException;
 
 /**
  * jsoncomponent 注解 注册成spring的bean
+ * All @JsonComponent beans in the ApplicationContext are automatically registered with Jackson
+ *
+ * Spring Boot also provides
+ *  ---> JsonObjectSerializer
+ * and
+ * ---> JsonObjectDeserializer
+ * base classes that provide useful alternatives to the standard Jackson versions
+ * when serializing objects.
  */
 @JsonComponent
 public class Example {
