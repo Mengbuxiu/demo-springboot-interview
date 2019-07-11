@@ -52,4 +52,7 @@ public class Student {
             }
     }
 
+    public static void main(String[] args) {
+        new Student.Builder().age(1).name("lombok有Accessor");
+    }
 }

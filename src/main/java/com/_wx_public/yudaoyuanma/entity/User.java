@@ -11,12 +11,13 @@ import lombok.experimental.Accessors;
  * @desc //TODO
  * @date 2019/4/27
  */
+//支持链式调用
 @Accessors(chain = true)
 @Setter
 @Getter
 @ToString
 
-/**用来创建对象，并且支持链式调用
+/**用来创建对象
  * @RequiredArgsConstructor(staticName = "of")*/
 public class User {
     private String userName;
