@@ -1,23 +1,13 @@
 package com.interview.demo.interceptor;
 
-import com._wx_public.yudaoyuanma.entity.User;
-import com.google.common.collect.Maps;
-import net.sf.ehcache.Element;
+import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.HandlerInterceptor;
 
-import javax.servlet.ServletOutputStream;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-import javax.servlet.http.Part;
-import java.io.File;
-import java.io.PrintWriter;
-import java.net.URL;
-import java.nio.charset.StandardCharsets;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Map;
 
+@Component
 public class LoginInterCerpotr implements HandlerInterceptor {
 //    static {
 //        //初始化
@@ -53,7 +43,7 @@ public class LoginInterCerpotr implements HandlerInterceptor {
      * 一个意思
      * https://blog.csdn.net/kiloyip/article/details/80171782
      */
-    private static final ThreadLocal<User> CURRENT_USER = new ThreadLocal<>();
+    /*private static final ThreadLocal<User> CURRENT_USER = new ThreadLocal<>();
 
     private static ThreadLocal<User> getCurrentThread() {
         return CURRENT_USER;
@@ -63,7 +53,7 @@ public class LoginInterCerpotr implements HandlerInterceptor {
         if (user != null) {
             getCurrentThread().set(user);
         }
-    }
+    }*/
 
     /**
      * 暴露给外部调用
@@ -71,8 +61,8 @@ public class LoginInterCerpotr implements HandlerInterceptor {
      *
      * @return
      */
-    public User getCurrentUser() {
-        //第一个get是获取当前线程，每一个用户就是一个线程
-        return getCurrentThread().get();
-    }
+//    public User getCurrentUser() {
+//        //第一个get是获取当前线程，每一个用户就是一个线程
+//        return getCurrentThread().get();
+//    }
 }

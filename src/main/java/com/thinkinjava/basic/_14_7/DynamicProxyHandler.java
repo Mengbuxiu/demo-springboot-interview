@@ -21,8 +21,8 @@ class DynamicProxyHandler implements InvocationHandler {
 
     @Override
     public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
-        System.out.println(String.format("*** proxy: %s , method: %s , args: %s",
-                proxy.getClass().getSimpleName(), method, Arrays.toString(args)));
+//        System.out.println(String.format("*** proxy: %s , method: %s , args: %s",
+//                proxy.getClass().getSimpleName(), method, Arrays.toString(args)));
 
         if (args != null) {
             for (Object arg : args) {
@@ -45,7 +45,7 @@ class SimpleDynamicProxy{
          *  需要被代理的接口 real = new 被代理类
          */
         Subject real = new RealObject();
-        consumer(real);
+        consumer("接口的实现类 --> " + real.getClass().getName(),real);
         /**
          *  Proxy.newProxyInstance(定义代理类的类加载器[事实上系统的类加载器也是可以的], Clazz[能够被代理的接口], 代理类[被代理接口])
          */
@@ -60,11 +60,17 @@ class SimpleDynamicProxy{
                 new Class[]{Subject.class},
                 /** 代理类 (被代理类), 注入需要被代理的接口 */
                 new DynamicProxyHandler(real));
-        consumer(proxyInstance);
+        consumer("动态代理  --> " +proxyInstance.getClass().getName(), proxyInstance);
     }
 
-    private static void consumer(Subject anSubject) {
-        anSubject.doSomething();
-        anSubject.somethingElse(" fuck world ");
+    private static void consumer(String name,Subject proxyClazz) {
+        System.out.println("我是" + name);
+        if (name.contains("$")){
+            System.out.println("我是动态代理，我给被代理接口干活 -------------");
+        }else {
+            System.out.println("我是接口的实现类，我给自己干活 -------------");
+        }
+        proxyClazz.doSomething();
+        proxyClazz.somethingElse(" fuck world ");
     }
 }
