@@ -12,4 +12,12 @@ import lombok.ToString;
 public class Person {
     private String name;
     private Integer age;
+
+    public Person(String san, String zhang, int i) {
+
+    }
+
+    public String getLastName() {
+        return this.name;
+    }
 }
