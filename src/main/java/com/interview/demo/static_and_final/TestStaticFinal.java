@@ -1,6 +1,6 @@
 package com.interview.demo.static_and_final;
 
-import com.java_feature.jdk8.lambda.entity.Person;
+import com.java_feature.jdk8.lambda.other_experience.entity.Person;
 
 import java.util.Arrays;
 

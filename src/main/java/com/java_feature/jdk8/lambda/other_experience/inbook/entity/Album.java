@@ -1,4 +1,4 @@
-package com.java_feature.jdk8.lambda.inbook.entity;
+package com.java_feature.jdk8.lambda.other_experience.inbook.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

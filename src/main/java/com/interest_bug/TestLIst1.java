@@ -1,6 +1,6 @@
 package com.interest_bug;
 
-import com.java_feature.jdk8.lambda.entity.Person;
+import com.java_feature.jdk8.lambda.other_experience.entity.Person;
 
 import java.util.ArrayList;
 

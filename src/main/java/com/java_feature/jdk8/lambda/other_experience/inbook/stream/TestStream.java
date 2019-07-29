@@ -1,6 +1,6 @@
-package com.java_feature.jdk8.lambda.inbook.stream;
+package com.java_feature.jdk8.lambda.other_experience.inbook.stream;
 
-import com.java_feature.jdk8.lambda.inbook.entity.Artist;
+import com.java_feature.jdk8.lambda.other_experience.inbook.entity.Artist;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 

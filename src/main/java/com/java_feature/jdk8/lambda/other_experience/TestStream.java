@@ -1,4 +1,4 @@
-package com.java_feature.jdk8.lambda;
+package com.java_feature.jdk8.lambda.other_experience;
 
 import java.util.Arrays;
 import java.util.List;

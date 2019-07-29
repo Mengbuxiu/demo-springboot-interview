@@ -1,7 +1,7 @@
-package com.java_feature.jdk8.lambda.train;
+package com.java_feature.jdk8.lambda.other_experience.train;
 
 import com.google.common.collect.Lists;
-import com.java_feature.jdk8.lambda.entity.Person;
+import com.java_feature.jdk8.lambda.other_experience.entity.Person;
 
 import java.util.ArrayList;
 import java.util.function.Consumer;

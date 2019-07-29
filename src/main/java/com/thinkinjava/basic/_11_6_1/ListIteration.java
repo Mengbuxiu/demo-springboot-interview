@@ -1,7 +1,7 @@
 package com.thinkinjava.basic._11_6_1;
 
 import com.google.common.collect.Lists;
-import com.java_feature.jdk8.lambda.entity.Person;
+import com.java_feature.jdk8.lambda.other_experience.entity.Person;
 
 import java.util.List;
 import java.util.ListIterator;

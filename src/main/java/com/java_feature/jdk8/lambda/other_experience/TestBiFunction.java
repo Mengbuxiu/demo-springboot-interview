@@ -1,6 +1,6 @@
-package com.java_feature.jdk8.lambda;
+package com.java_feature.jdk8.lambda.other_experience;
 
-import com.java_feature.jdk8.lambda.entity.Person;
+import com.java_feature.jdk8.lambda.other_experience.entity.Person;
 
 import java.util.Arrays;
 import java.util.List;
