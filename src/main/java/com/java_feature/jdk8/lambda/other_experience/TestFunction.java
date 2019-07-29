@@ -1,7 +1,7 @@
 package com.java_feature.jdk8.lambda.other_experience;
 
 
-import com.java_feature.jdk8.lambda.other_experience.interf.Function;
+import com.java_feature.jdk8.lambda.interf.Function;
 
 /**
  * @author king_zl

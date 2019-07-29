@@ -2,8 +2,8 @@ package com.java_feature.jdk8.lambda.other_experience;
 
 
 import com.java_feature.jdk8.lambda.other_experience.entity.Person;
-import com.java_feature.jdk8.lambda.other_experience.interf.Executor;
-import com.java_feature.jdk8.lambda.other_experience.interf.NameChecker;
+import com.java_feature.jdk8.lambda.interf.Executor;
+import com.java_feature.jdk8.lambda.interf.NameChecker;
 
 import java.util.Arrays;
 import java.util.List;

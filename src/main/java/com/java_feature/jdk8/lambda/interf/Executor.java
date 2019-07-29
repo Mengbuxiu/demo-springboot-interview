@@ -1,4 +1,4 @@
-package com.java_feature.jdk8.lambda.other_experience.interf;
+package com.java_feature.jdk8.lambda.interf;
 
 import com.java_feature.jdk8.lambda.other_experience.entity.Person;
 
