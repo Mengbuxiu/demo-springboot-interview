@@ -21,6 +21,7 @@ class TestFun_3 {
 //        "篮球三步上篮的过程篮球三步上篮的过程："
         /*      用 Function来实现一下       */
         final String[] str = {"我 -> "};
+        // Function 中 apply方法的实现
         Function<String, String> step_1 = (s) -> str[0] += "运球";
         Function<String, String> step_2 = (s) -> str[0] += "迈步";
         Function<String, String> step_3 = (s) -> str[0] += "起跳";
