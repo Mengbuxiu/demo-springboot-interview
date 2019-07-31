@@ -8,6 +8,7 @@ import org.junit.jupiter.api.Test;
  * @version 1.0
  * @description // 尝试一下设计复杂Function的功能
  * @date 2019/7/30 11:43
+ * 丧失了一定的灵活性
  */
 @SuppressWarnings("unchecked")
 class TestFun_3 {
