@@ -13,7 +13,7 @@ import java.util.Objects;
  *
  *        <T> 输入到函数的类型
  * @param <T> the type of the input to the function
- *        <R> 输出到函数的类型
+ *        <R> 函数结果的类型
  * @param <R> the type of the result of the function
  *
  * @since 1.8
