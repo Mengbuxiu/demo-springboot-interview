@@ -10,7 +10,7 @@ import java.lang.reflect.Field;
  */
 public class TestInitParam {
     public static void main(String[] args) throws IllegalAccessException {
-        User user = new User();
+        User user = new User("z",1,"sex");
         initUser(user);
         // 年龄为0，校验为通过情况
         boolean checkResult = checkUser(user);

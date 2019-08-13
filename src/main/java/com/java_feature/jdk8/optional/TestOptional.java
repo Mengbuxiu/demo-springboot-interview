@@ -19,7 +19,7 @@ import java.util.Optional;
 class TestOptional {
     @Test
     void testOf(){
-        User user = new User();
+        User user = new User("z0",1,"man");
         String isGirl = Optional.of(user).map(User::getSex).orElse("girl");
         String isGirl1 = Optional.of(user).map(User::getSex).orElse("...");
         Integer age = Optional.of(user).map(User::getAge).orElse(1);
