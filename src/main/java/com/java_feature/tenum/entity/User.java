@@ -6,6 +6,7 @@ import com.java_feature.tenum.annotation.ValidateAge;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
 
 /**
  * user
@@ -15,6 +16,7 @@ import lombok.Setter;
 @Setter
 @Getter
 @AllArgsConstructor
+@ToString
 public class User implements Comparable<User>{
     private String username;
     @ValidateAge(min = 20, max = 35, value = 22)
