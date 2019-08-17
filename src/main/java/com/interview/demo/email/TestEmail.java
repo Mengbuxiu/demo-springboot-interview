@@ -23,6 +23,6 @@ public class TestEmail {
 
     @Test
     void testSend(){
-       service.sendSimpleMail(to,"test","hello");
+       service.sendSimpleMail(to,"test","warning!!!has from");
     }
 }
