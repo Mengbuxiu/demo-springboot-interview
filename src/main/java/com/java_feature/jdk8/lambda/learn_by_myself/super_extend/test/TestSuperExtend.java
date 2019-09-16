@@ -90,10 +90,17 @@ class TestSuperExtend {
         dest.forEach(System.out::println);
     }
 
-
+    /**
+     * 只能放入 TerrestrialAnimal 及其父类
+     * @param sp
+     */
     private void checkSuper(List<? super TerrestrialAnimal> sp) {
     }
 
+    /**
+     * 只能放入 TerrestrialAnimal 及其子类
+     * @param sp
+     */
     private void checkExtends(List<? extends TerrestrialAnimal> sp) {
 
     }
