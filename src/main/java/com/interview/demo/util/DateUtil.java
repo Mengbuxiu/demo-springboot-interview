@@ -225,5 +225,7 @@ public class DateUtil {
         Period period = Period.between(startLocalDate, endLocalDate);
         return period.getDays();
     }
-
+    public static LocalDateTime longToLocalDateTime(Long time) {
+        return LocalDateTime.ofEpochSecond(time/1000,0, ZoneOffset.ofHours(8));
+    }
 }
