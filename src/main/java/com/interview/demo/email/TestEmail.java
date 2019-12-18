@@ -15,14 +15,14 @@ import org.springframework.test.context.junit.jupiter.SpringExtension;
  */
 @ExtendWith(SpringExtension.class) //导入spring测试框架
 @SpringBootTest  //提供spring依赖注入
-public class TestEmail {
+class TestEmail {
     @Autowired
     private MailServiceImpl service;
-    @Value("${mail.from.addr}")
+    @Value("${mail.to.addr}")
     private String to;
 
     @Test
     void testSend(){
-       service.sendSimpleMail(to,"test","warning!!!has from");
+       service.sendSimpleMail(to,"test","this is for test");
     }
 }
