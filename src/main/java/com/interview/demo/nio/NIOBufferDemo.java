@@ -13,7 +13,7 @@ import java.nio.channels.FileChannel;
  * @description // NIO
  * @date 2020/1/9 15:28
  */
-public class BIOBufferDemo {
+public class NIOBufferDemo {
     @SneakyThrows
     public static void main(String[] args) {
         int bufferSize = 1024;
