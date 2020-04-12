@@ -1,7 +1,5 @@
 package com.java.book.java_network_programing._4._10;
 
-import com.java.book.java_network_programing._4_11.LookupTask;
-
 import java.io.*;
 import java.net.InetAddress;
 import java.net.UnknownHostException;

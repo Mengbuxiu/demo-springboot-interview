@@ -1,6 +1,6 @@
-package com.java.book.java_network_programing._4_12;
+package com.java.book.java_network_programing._4._12;
 
-import com.java.book.java_network_programing._4_11.LookupTask;
+import com.java.book.java_network_programing._4._11.LookupTask;
 
 import java.io.*;
 import java.nio.charset.StandardCharsets;
@@ -13,7 +13,7 @@ import java.util.concurrent.Future;
 /**
  * @author Alin
  * @desc //读取文件，并为每一行创建一个
- * {@link com.java.book.java_network_programing._4_11.LookupTask}
+ * {@link LookupTask}
  * @date 2020/4/9
  */
 public class PooledWebLog {
