@@ -1,0 +1,38 @@
+Compiled from "Test2.java"
+public class com.jike_time.深入拆解java虚拟机.JVM如何处理异常.Test2 {
+  public com.jike_time.深入拆解java虚拟机.JVM如何处理异常.Test2();
+    Code:
+       0: aload_0
+       1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+       4: return
+
+  public static void main(java.lang.String[]);
+    Code:
+       0: ldc           #2                  // String This is try
+       2: astore_1
+       3: getstatic     #3                  // Field java/lang/System.out:Ljava/io/PrintStream;
+       6: iconst_1
+       7: iconst_0
+       8: idiv
+       9: invokevirtual #4                  // Method java/io/PrintStream.println:(I)V
+      12: ldc           #5                  // String This is finally
+      14: astore_1
+      15: return
+      16: astore_2
+      17: ldc           #7                  // String This is catch
+      19: astore_1
+      20: new           #6                  // class java/lang/Exception
+      23: dup
+      24: ldc           #8                  // String catch
+      26: invokespecial #9                  // Method java/lang/Exception."<init>":(Ljava/lang/String;)V
+      29: athrow
+      30: astore_3
+      31: ldc           #5                  // String This is finally
+      33: astore_1
+      34: return
+    Exception table:
+       from    to  target type
+           0    12    16   Class java/lang/Exception
+           0    12    30   any
+          16    31    30   any
+}
