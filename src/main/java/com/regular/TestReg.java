@@ -12,6 +12,19 @@ import java.util.regex.Pattern;
  * @date 2019/8/12 10:52
  */
 class TestReg {
+    /**
+     * 判断是否含有特殊字符
+     *
+     * true为包含，false为不包含
+     */
+    @Test
+    public void reg(){
+        String regEx = "[ _`~!@#$%^&*()+=|{}':;,\\[\\].<>/?！￥…（）—【】‘；：”“’。，、？]|\n|\r|\t";
+        Pattern p = Pattern.compile(regEx);
+        Matcher m = p.matcher("哈哈哈");
+        System.out.println(m.find());
+    }
+
     @Test
     void simpleReg1(){
 //        String reg = "[a-zA-Z][(0-9){1.}+(a-zA-Z)]{7,29}";
