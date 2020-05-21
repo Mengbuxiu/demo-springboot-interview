@@ -1,4 +1,4 @@
-package com.jike_time.juc;
+package com.jeek_time.juc;
 
 import lombok.ToString;
 import lombok.extern.slf4j.Slf4j;

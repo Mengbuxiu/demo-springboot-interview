@@ -1,4 +1,4 @@
-package com.jike_time.juc;
+package com.jeek_time.juc;
 
 
 import java.util.concurrent.CountDownLatch;

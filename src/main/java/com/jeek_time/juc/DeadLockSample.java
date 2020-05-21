@@ -1,4 +1,4 @@
-package com.jike_time.juc;
+package com.jeek_time.juc;
 
 /**
  * 死锁复现

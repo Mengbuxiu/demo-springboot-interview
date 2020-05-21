@@ -1,4 +1,4 @@
-package com.jike_time.深入拆解java虚拟机.JVM如何处理异常;
+package com.jeek_time.深入拆解java虚拟机.JVM如何处理异常;
 
 /**
  * @author Alin

@@ -1,6 +1,6 @@
 Compiled from "DealWithExceptionForJVM.java"
-public class com.jike_time.������java�����.DealWithExceptionForJVM {
-  public com.jike_time.������java�����.DealWithExceptionForJVM();
+public class com.jeek_time.������java�����.DealWithExceptionForJVM {
+  public com.jeek_time.������java�����.DealWithExceptionForJVM();
     Code:
        0: aload_0
        1: invokespecial #1                  // Method java/lang/Object."<init>":()V
