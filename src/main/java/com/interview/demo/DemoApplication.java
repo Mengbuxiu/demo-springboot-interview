@@ -16,17 +16,10 @@ public class DemoApplication extends SpringBootServletInitializer {
     }
 
     public static void main(String[] args) {
-        //SpringApplication.run(DemoApplication.class);
         SpringApplication run = new SpringApplication(DemoApplication.class);
         run.setBannerMode(Banner.Mode.OFF);
         run.addListeners();
         run.run(args);
-//        ---------------------------------------
-//        new SpringApplicationBuilder()
-//                .sources(notNull)
-//                .child(DemoApplication.class)
-//                .bannerMode(Banner.Mode.OFF)
-//                .run(args);
     }
 
 }
