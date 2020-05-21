@@ -7,6 +7,9 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+
 /**
  * @author Alin
  * @version 1.0
@@ -24,5 +27,9 @@ class TestEmail {
     @Test
     void testSend(){
        service.sendSimpleMail(to,"test","this is for test");
+        ExecutorService exec = Executors.newCachedThreadPool();
+        exec.execute(new ExceptionThread());
+
+        exec.shutdown();
     }
 }
