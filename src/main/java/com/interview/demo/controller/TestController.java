@@ -1,32 +1,66 @@
 package com.interview.demo.controller;
 
+import com.alibaba.fastjson.JSONObject;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.HashMap;
 import java.util.Map;
 
 @Controller
-@RequestMapping("/aa")
+@RequestMapping("/type")
 public class TestController {
-    @RequestMapping("/to_index")
-    public String test1(){
-        System.out.println("to_index ================");
-        return "index";
-    }
-    @RequestMapping("/boot")
-    public String boot(){
-        System.out.println("to_testBootStrap ================");
-        return "testBootStrap";
-    }
-    @PostMapping(value = "/params", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+    @PostMapping(value = "/body/none")
     @ResponseBody
-    public Map<String, String> params(){
+    public Map<String, String> none(@RequestBody JSONObject object){
+        final String name = object.getString("name");
         Map<String, String> map = new HashMap<>();
-        map.put("data", "success");
+        map.put("data", name);
         return map;
     }
+
+    @PostMapping(value = "/body/form-data", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+    @ResponseBody
+    public Map<String, String> form_data(@RequestParam("name") String name){
+        Map<String, String> map = new HashMap<>();
+        map.put("data", name);
+        return map;
+    }
+
+    @PostMapping(value = "/body/x-www-form-urlencoded", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+    @ResponseBody
+    public Map<String, String> urlencoded(@RequestParam("name") String name){
+        Map<String, String> map = new HashMap<>();
+        map.put("data", name);
+        return map;
+    }
+
+    @PostMapping(value = "/body/raw", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+    @ResponseBody
+    public Map<String, String> raw(@RequestBody JSONObject object){
+        final String name = object.getString("name");
+        Map<String, String> map = new HashMap<>();
+        map.put("data", name);
+        return map;
+    }
+
+    @PostMapping(value = "/body/binary", produces = MediaType.MULTIPART_FORM_DATA_VALUE)
+    @ResponseBody
+    public Map<String, String> binary(@RequestBody JSONObject object){
+        final String name = object.getString("name");
+        Map<String, String> map = new HashMap<>();
+        map.put("data", name);
+        return map;
+    }
+
+
+    /*@PostMapping(value = "/params", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+    @ResponseBody
+    public Map<String, String> params(@RequestBody JSONObject object){
+        final String name = object.getString("name");
+        Map<String, String> map = new HashMap<>();
+        map.put("data", name);
+        return map;
+    }*/
 }
