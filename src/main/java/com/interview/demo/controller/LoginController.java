@@ -3,13 +3,13 @@ package com.interview.demo.controller;
 import com.alibaba.fastjson.JSON;
 import com.interview.demo.cache.TestCacheService;
 import com.interview.demo.interf.StatusSymbol;
+import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
@@ -25,9 +25,6 @@ public class LoginController {
         return "login";
     }
 
-    @Autowired
-    HttpServletRequest request;
-
     @RequestMapping("/login")
     @ResponseBody
     public String login(@RequestParam("userName") String userName,
@@ -35,7 +32,7 @@ public class LoginController {
                         HttpServletRequest request) throws IOException {
         Map<String, String> map = new HashMap<>();
         if ("zhenglin".equals(userName) && "123456".equals(userPwd)) {
-            this.request.getSession().setAttribute("loginStatus", StatusSymbol.LOGIN_IN);
+            request.getSession().setAttribute("loginStatus", StatusSymbol.LOGIN_IN);
             map.put("status", "1");
             map.put("msg", "success");
             System.out.println(service.getName());
