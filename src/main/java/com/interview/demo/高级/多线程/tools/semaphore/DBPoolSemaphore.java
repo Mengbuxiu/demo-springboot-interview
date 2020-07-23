@@ -14,12 +14,12 @@ public class DBPoolSemaphore {
 	private final Semaphore useful,useless;//useful表示可用的数据库连接，useless表示已用的数据库连接
 	
 	public DBPoolSemaphore() {
-		this. useful = new Semaphore(POOL_SIZE);
+		this.useful = new Semaphore(POOL_SIZE);
 		this.useless = new Semaphore(0);
 	}
 	
 	//存放数据库连接的容器
-	private static LinkedList<Connection> pool = new LinkedList<Connection>();
+	private static final LinkedList<Connection> pool = new LinkedList<>();
 	//初始化池
 	static {
         for (int i = 0; i < POOL_SIZE; i++) {
