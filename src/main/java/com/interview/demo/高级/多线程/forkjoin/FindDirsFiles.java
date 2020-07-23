@@ -22,7 +22,7 @@ public class FindDirsFiles extends RecursiveAction{
         try {
             // 用一个 ForkJoinPool 实例调度总任务
             ForkJoinPool pool = new ForkJoinPool();
-            FindDirsFiles task = new FindDirsFiles(new File("F:/"));
+            FindDirsFiles task = new FindDirsFiles(new File("/opt"));
 
             pool.execute(task);//异步调用
 
@@ -52,7 +52,7 @@ public class FindDirsFiles extends RecursiveAction{
 					subTasks.add(new FindDirsFiles(file));
 				}else {
 					//遇到文件，检查
-					if(file.getAbsolutePath().endsWith("txt")) {
+					if(file.getAbsolutePath().endsWith(".sh")) {
 						System.out.println("文件："+file.getAbsolutePath());
 					}
 				}

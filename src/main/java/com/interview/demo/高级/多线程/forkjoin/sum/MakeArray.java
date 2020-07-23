@@ -8,7 +8,7 @@ import java.util.Random;
  */
 public class MakeArray {
     //数组长度
-    public static final int ARRAY_LENGTH  = 100000000;
+    public static final int ARRAY_LENGTH  = 9;
 
     public static int[] makeArray() {
 
