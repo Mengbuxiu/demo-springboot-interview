@@ -3,8 +3,6 @@ package com.interview.demo.高级.多线程.原子类.answer;
 import java.util.concurrent.atomic.AtomicInteger;
 
 /**
- *@author Mark老师   享学课堂 https://enjoy.ke.qq.com 
- *
  *类说明：有一个残缺AtomicInteger的类实现了线程安全的：
  *get方法和compareAndSet()方法
  *自行实现它的递增方法
