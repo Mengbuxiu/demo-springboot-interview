@@ -32,7 +32,7 @@ public class UseCyclicBarrier {
         public void run() {
             StringBuilder result = new StringBuilder();
             for(Map.Entry<String,Long> workResult:resultMap.entrySet()){
-            	result.append("["+workResult.getValue()+"]");
+            	result.append("[").append(workResult.getValue()).append("]");
             }
             System.out.println(" the result = "+ result);
             System.out.println("do other business........");
