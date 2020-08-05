@@ -14,6 +14,7 @@ public class TestMyLock {
         final Lock lock = new ReentrantLock();
         
         class Worker extends Thread {
+            @Override
             public void run() {
                 while (true) {
                     lock.lock();

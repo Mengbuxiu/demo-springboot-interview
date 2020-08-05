@@ -14,6 +14,11 @@ public class LiftOff implements Runnable {
     private final int id = taskCount++;
 
     public LiftOff() {
+        try {
+            Thread.sleep(3*1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 
     public LiftOff(int countDown) {
