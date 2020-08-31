@@ -11,8 +11,7 @@ import lombok.experimental.Accessors;
  * @desc //TODO
  * @date 2019/4/27
  */
-//支持链式调用
-@Accessors(chain = true)
+//@Accessors(chain = true)
 @Setter
 @Getter
 @ToString
@@ -23,8 +22,8 @@ public class User {
     private String userName;
     private Integer age;
 
-//    public static void main(String[] args) {
-//        User of = User.of();
-//        System.out.println(of);
-//    }
+    public static void main(String[] args) {
+        /*User of = User.of();
+        System.out.println(of);*/
+    }
 }

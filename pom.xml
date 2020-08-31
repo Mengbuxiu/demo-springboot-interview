@@ -27,6 +27,12 @@
    </repositories>
 
     <dependencies>
+        <!-- https://mvnrepository.com/artifact/net.jpountz.lz4/lz4 -->
+        <dependency>
+            <groupId>net.jpountz.lz4</groupId>
+            <artifactId>lz4</artifactId>
+            <version>1.3.0</version>
+        </dependency>
         <dependency>
             <groupId>com.github.erosb</groupId>
             <artifactId>everit-json-schema-jdk6</artifactId>
@@ -123,31 +129,36 @@
             <artifactId>zip4j</artifactId>
             <version>1.3.2</version>
         </dependency>
+        <dependency>
+            <groupId>org.elasticsearch.client</groupId>
+            <artifactId>elasticsearch-rest-high-level-client</artifactId>
+            <version>7.4.1</version>
+        </dependency>
 
-        <!-- lucene核心库 -->
-        <dependency>
-            <groupId>org.apache.lucene</groupId>
-            <artifactId>lucene-core</artifactId>
-            <version>${lunece.version}</version>
-        </dependency>
-        <!-- Lucene的查询解析器 -->
-        <dependency>
-            <groupId>org.apache.lucene</groupId>
-            <artifactId>lucene-queryparser</artifactId>
-            <version>${lunece.version}</version>
-        </dependency>
-        <!-- lucene的默认分词器库 -->
-        <dependency>
-            <groupId>org.apache.lucene</groupId>
-            <artifactId>lucene-analyzers-common</artifactId>
-            <version>${lunece.version}</version>
-        </dependency>
-        <!-- lucene的高亮显示 -->
-        <dependency>
-            <groupId>org.apache.lucene</groupId>
-            <artifactId>lucene-highlighter</artifactId>
-            <version>${lunece.version}</version>
-        </dependency>
+<!--        &lt;!&ndash; lucene核心库 &ndash;&gt;-->
+<!--        <dependency>-->
+<!--            <groupId>org.apache.lucene</groupId>-->
+<!--            <artifactId>lucene-core</artifactId>-->
+<!--            <version>${lunece.version}</version>-->
+<!--        </dependency>-->
+<!--        &lt;!&ndash; Lucene的查询解析器 &ndash;&gt;-->
+<!--        <dependency>-->
+<!--            <groupId>org.apache.lucene</groupId>-->
+<!--            <artifactId>lucene-queryparser</artifactId>-->
+<!--            <version>${lunece.version}</version>-->
+<!--        </dependency>-->
+<!--        &lt;!&ndash; lucene的默认分词器库 &ndash;&gt;-->
+<!--        <dependency>-->
+<!--            <groupId>org.apache.lucene</groupId>-->
+<!--            <artifactId>lucene-analyzers-common</artifactId>-->
+<!--            <version>${lunece.version}</version>-->
+<!--        </dependency>-->
+<!--        &lt;!&ndash; lucene的高亮显示 &ndash;&gt;-->
+<!--        <dependency>-->
+<!--            <groupId>org.apache.lucene</groupId>-->
+<!--            <artifactId>lucene-highlighter</artifactId>-->
+<!--            <version>${lunece.version}</version>-->
+<!--        </dependency>-->
         <!-- https://mvnrepository.com/artifact/com.itextpdf/itextpdf -->
         <dependency>
             <groupId>com.itextpdf</groupId>

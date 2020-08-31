@@ -47,7 +47,7 @@ public class UserApi {
          * 关于链式调用可以参考src\main\java\com\thinkinjava\basic\_10_6\Parcel7_1.java
          */
         User user2 = new User();
-        user2.setUserName("Alin").setAge(11);
+//        user2.setUserName("Alin").setAge(11);
         /**
          * BeanUtils.copyProperties 是一个浅拷贝方法，复制属性时，
          * 我们只需要把

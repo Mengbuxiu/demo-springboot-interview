@@ -1,3 +1,4 @@
+/*
 package com.lucense;
 
 import org.apache.lucene.analysis.Analyzer;
@@ -15,12 +16,14 @@ import org.junit.jupiter.api.Test;
 
 import java.nio.file.Paths;
 
+*/
 /**
  * @author Alin
  * @version 1.0
  * @description // TODO
  * @date 2019/9/16 18:25
- */
+ *//*
+
 class TestLucense {
     // 创建索引
     @Test
@@ -49,3 +52,4 @@ class TestLucense {
         indexWriter.close();
     }
 }
+*/
