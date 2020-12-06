@@ -1,5 +1,6 @@
 package com.didi.轮子怎么用.克隆;
 
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -15,6 +16,7 @@ public class TestBeanUtils {
 
     @Data
     @NoArgsConstructor
+    @AllArgsConstructor
     @Builder
     private static class Person {
         private String name;
