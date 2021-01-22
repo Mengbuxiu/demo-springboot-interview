@@ -1,4 +1,4 @@
-package com.写文章的教程.关于jdk8时间类的思考;
+package com.教程.关于jdk8时间类的思考;
 
 import org.apache.poi.ss.formula.functions.Now;
 import org.junit.jupiter.api.Test;
