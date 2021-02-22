@@ -1,9 +1,9 @@
 package com.pattern.策略;
 
-public class EBankStrategy implements Strategy {
-
+public class StrategyCard implements Strategy{
+ 
     @Override
     public Double calRecharge(Double charge, RechargeTypeEnum type) {
-        return charge * 0.85;
+       return charge+charge*0.01;
     }
-}
+ }

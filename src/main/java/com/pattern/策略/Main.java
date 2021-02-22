@@ -1,6 +1,6 @@
 package com.pattern.策略;
 
-public class Client {
+public class Main {
  
     public static void main(String[] args) {
  
