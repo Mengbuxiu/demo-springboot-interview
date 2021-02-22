@@ -8,6 +8,9 @@ import javax.annotation.PostConstruct;
 import java.util.Objects;
 
 /**
+ * 出处：https://www.zhihu.com/question/344856665/answer/1701354059
+ * 整理后如下
+ *
  * 通用的“策略树“框架，通过树形结构实现分发与委托，每层通过指定的参数进行向下分发委托，直到达到最终的执行者。
  * 该框架包含两个类：{@code StrategyHandler} 和 {@code AbstractStrategyRouter}
  * 其中：通过实现 {@code AbstractStrategyRouter} 抽象类完成对策略的分发，
