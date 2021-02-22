@@ -1,4 +1,4 @@
-package com.pattern;
+package com.pattern.策略;
 
 public interface Strategy {
     /**
