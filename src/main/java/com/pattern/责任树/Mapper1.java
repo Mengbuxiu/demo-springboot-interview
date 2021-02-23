@@ -9,6 +9,6 @@ package com.pattern.责任树;
 public class Mapper1 implements AbstractStrategyRouter.StrategyMapper {
     @Override
     public StrategyHandler get(Object param) {
-        return null;
+        return new Handler_A();
     }
 }

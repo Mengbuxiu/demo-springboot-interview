@@ -6,16 +6,15 @@ package com.pattern.责任树;
  * @desc 中间路由层
  * @date 2021/2/22 下午3:34
  */
-public class StrategyRouterA extends AbstractStrategyRouter implements StrategyHandler{
+public class StrategyRouterA<Object, Boolean> extends AbstractStrategyRouter<Object, Boolean> implements StrategyHandler<Object, Boolean>{
+
     @Override
-    protected StrategyMapper registerStrategyMapper() {
-        // 决定走向
+    protected StrategyMapper<Object, Boolean> registerStrategyMapper() {
         return null;
     }
 
     @Override
-    public Object apply(Object param) {
-        // 参数验证...
+    public Boolean apply(Object param) {
         return null;
     }
 }

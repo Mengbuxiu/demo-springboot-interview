@@ -9,7 +9,7 @@ package com.pattern.责任树;
 public class Handler_A implements StrategyHandler {
     @Override
     public Object apply(Object param) {
-        System.out.println("这是A🍃节点，可以处理逻辑。");
+        System.out.println("这是 <A🍃> 节点 - 可以处理逻辑。");
         return null;
     }
 }
